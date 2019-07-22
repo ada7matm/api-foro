@@ -18,6 +18,7 @@ const getPostInfo = () => {
         updateAuthorInfo(response.data.user);
         addComment(response.data);
     })
+    .catch(error => console.log(error.message))
 }
 
 const updateAuthorInfo = profile => {
@@ -36,6 +37,7 @@ const getComments = () => {
             addComment(comment);
         }
     })
+    .catch(error => console.log(error.message))
 }
 
 const addComment = comment => {
@@ -57,6 +59,7 @@ commentBtn.onclick = () => {
         commentInput.value = '';
         getComments();
     })
+    .catch(error => alert('There was an error, please try again'))
 }
 
 const updatePage = () => {

@@ -13,6 +13,7 @@ const getProfileInfo = () => {
     .then(response => {
         updateProfileInfo(response.data);
     })
+    .catch(error => console.log(error.message))
 }
 
 const updateProfileInfo = profile => {
@@ -32,6 +33,7 @@ const getPosts = () => {
             addPost(post);
         }
     })
+    .catch(error => console.log(error.message))
 }
 
 const addPost = post => {
@@ -53,6 +55,7 @@ const deletePost = id => {
     axios
     .delete(`http://localhost:3000/posts/${id}`)
     .then(response => getPosts())
+    .catch(error => alert('There was an error, please try again'))
 }
 
 const updatePage = () => {

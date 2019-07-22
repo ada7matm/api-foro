@@ -13,6 +13,7 @@ const getCommunities = () => {
             addCommunity(community);
         }
     })
+    .catch(error => console.log(error.message))
 }
 
 const addCommunity = community => {
@@ -31,6 +32,7 @@ postBtn.onclick = () => {
         userId: userId
     })
     .then(response => window.location.href = `community.html?id=${communities.value}`)
+    .catch(error => alert('There was an error, please try again'))
 }
 
 getCommunities();

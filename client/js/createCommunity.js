@@ -1,5 +1,5 @@
-const name = document.getElementById('title');
-const description = document.getElementById('body');
+const name = document.getElementById('name');
+const description = document.getElementById('description');
 const createBtn = document.getElementById('create-btn');
 
 createBtn.onclick = () => {
@@ -9,4 +9,5 @@ createBtn.onclick = () => {
         description: description.value,
     })
     .then(response => window.location.href = `community.html?id=${response.data.id}`)
+    .catch(error => alert('There was an error. Please try again'))
 }

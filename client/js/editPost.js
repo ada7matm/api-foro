@@ -11,6 +11,7 @@ const updatePostInfo = () => {
         title.value = response.data.title; 
         body.value = response.data.body; 
     })
+    .catch(error => console.log(error.message))
 }
 
 postBtn.onclick = () => {
@@ -20,6 +21,7 @@ postBtn.onclick = () => {
         body: body.value,
     })
     .then(response => window.location.href = `post.html?id=${postId}`)
+    .catch(error => alert('There was an error, please try again'))
 }
 
 updatePostInfo();

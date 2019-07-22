@@ -11,6 +11,7 @@ const getCommunityInfo = () => {
     .then(response => {
         updateCommunityInfo(response.data);
     })
+    .catch(error => console.log(error.message))
 }
 
 const updateCommunityInfo = community => {
@@ -27,6 +28,7 @@ const getPosts = () => {
             addPost(post);
         }
     })
+    .catch(error => console.log(error.message))
 }
 
 const addPost = post => {

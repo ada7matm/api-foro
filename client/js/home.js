@@ -14,6 +14,7 @@ const getProfileInfo = () => {
     .then(response => {
         updateProfileInfo(response.data);
     })
+    .catch(error => console.log(error.message))
 }
 
 const updateProfileInfo = profile => {
@@ -32,6 +33,7 @@ const getCommunities = () => {
             addCommunity(community);
         }
     })
+    .catch(error => console.log(error.message))
 }
 
 const addCommunity = community => {
@@ -50,6 +52,7 @@ const getPosts = () => {
             addPost(post);
         }
     })
+    .catch(error => console.log(error.message))
 }
 
 const addPost = post => {
