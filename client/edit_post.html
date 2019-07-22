@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Edit post</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/mdbootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<header class="w-100">
+
+				<nav class="justify-content-end navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar"
+					style="">
+					<a id="navbar-static-login"
+						class="mr-auto btn btn-primary btn-rounded btn-sm waves-effect waves-light"
+						href="home.html">Home
+						<i class="fas fa-home ml-2"></i>
+					</a>
+					<!-- SideNav slide-out button -->
+					<!-- Login / register -->
+					<a id="navbar-static-login" class="btn btn-success btn-rounded btn-sm waves-effect waves-light"
+						href="create_post.html">Add post
+						<i class="fas fa-plus ml-2"></i>
+					</a>
+					<a id="navbar-static-login" class="btn btn-secondary btn-rounded btn-sm waves-effect waves-light"
+						href="create_community.html">Add community
+						<i class="fas fa-plus ml-2"></i>
+					</a>
+					<a  class="btn btn-info btn-rounded btn-sm waves-effect waves-light"
+						id="logout">Log out
+						<i class="fas fa-sign-in-alt ml-2"></i>
+					</a>
+				</nav>
+
+				<div class="card card-intro sky-gradient">
+					<div class="card-body white-text rgba-black-light text-center">
+						<!--Grid row-->
+						<div class="row d-flex justify-content-center">
+							<!--Grid column-->
+							<div class="col-md-6">
+								<h1 class="font-weight-bold h2">Edit post</h1>
+
+							</div>
+							<!--Grid column-->
+						</div>
+						<!--Grid row-->
+					</div>
+				</div>
+
+			</header>
+
+			<main class="pt-4">
+				<div class="container">
+					<!--Grid row-->
+					<div class="row">
+						<!--Grid column-->
+						<div class="col-md-8 offset-md-2 mb-4">
+
+							<!--Card: Answer-->
+							<!--Card: Answer-->
+							<div class="card mb-4">
+								<!-- Card header -->
+								<div class="card-header d-flex justify-content-between">
+									<div class="mt-1">Edit post</div>
+								</div>
+								<!-- Card body -->
+								<div class="card-body">
+									<div id="answer-editor" class="form-group">
+										<!-- Default form reply -->
+										<form id="answer-form" method="post" class="needs-validation" novalidate="">
+											<!-- Answer -->
+											<div class="md-form">
+												<input type="text" id="title" class="form-control">
+												<label for="title">Title</label>
+											</div>
+											<div class="md-form">
+												<textarea id="body" class="md-textarea form-control"
+													rows="3"></textarea>
+												<label for="body">Write something</label>
+											</div>
+											<div class="invalid-feedback">
+												Please insert min. 20 characters. </div>
+											<div class="text-center mt-3">
+												<a href="#"
+													class="btn btn-info btn-md show_login waves-effect waves-light"
+													id="post-btn">Edit</a>
+											</div>
+										</form>
+									</div>
+								</div>
+								<!-- Default form reply -->
+							</div>
+							<!--Card: Answer-->
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<!--Grid column-->
+						<script type="text/javascript">var question_id = "57029";</script>
+					</div>
+					<!--Grid row-->
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	
+	<script src="js/checkLogin.js"></script>
+	<script src="js/editPost.js"></script>
+
+</body>
+
+</html>
