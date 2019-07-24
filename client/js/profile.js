@@ -3,7 +3,10 @@ const answers = document.getElementById('answers');
 const questions = document.getElementById('questions');
 const postsContainer = document.getElementById('posts');
 const postModel = document.getElementsByClassName('post')[0];
+const commentModel = document.getElementsByClassName('post')[1];
 const title = document.getElementById('title');
+const loadPosts = document.getElementById('load-posts');
+const loadComments = document.getElementById('load-comments');
 
 const userId = window.location.search.split('=')[1];
 
@@ -58,9 +61,42 @@ const deletePost = id => {
     .catch(error => alert('There was an error, please try again'))
 }
 
+const getComments = () => {
+    postsContainer.innerHTML = '';
+    axios
+    .get(`http://localhost:3000/comments/?user=${userId}`)
+    .then(response => {
+        for(const comment of response.data) {
+            addComment(comment);
+        }
+    })
+    .catch(error => console.log(error.message))
+}
+
+const addComment = comment => {
+    const newComment = commentModel.cloneNode(true);
+    newComment.children[0].nodeValue = comment.body;
+    newComment.children[0].children[1].href = `edit_comment.html?id=${comment.id}`;
+    newComment.children[0].children[2].onclick = () => {
+        deleteComment(comment.id);
+    }
+
+    postsContainer.appendChild(newComment);
+}
+
+const deleteComment = id => {
+    axios
+    .delete(`http://localhost:3000/comments/${id}`)
+    .then(response => getComments())
+    .catch(error => alert('There was an error, please try again'))
+}
+
 const updatePage = () => {
     getProfileInfo();
     getPosts();
 }
+
+loadPosts.onclick = getPosts;
+loadComments.onclick = getComments;
 
 updatePage();

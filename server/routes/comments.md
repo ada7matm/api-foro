@@ -27,7 +27,6 @@ RESPONSE (ejemplo):
 ENDPOINT: /comments/
 METODO: post
 ACCION: crea un comentario y lo guarda
-RESPONSE (ejemplo):
 BODY (ejemplo):
     {
         body: 'Me parece un ejemplo muy bueno',
@@ -40,3 +39,32 @@ RESPONSE (ejemplo):
         id: 1 // (del comentario creado)
     }
     STATUS: 200      
+
+-----------------------------------------------------
+
+ENDPOINT: /comments/:id
+METODO: put
+ACCION: edita un comentario
+RESPONSE (ejemplo):
+BODY (ejemplo):
+    {
+        body: 'Me parece un ejemplo muy bueno',
+        userId: 2
+    }
+RESPONSE (ejemplo):
+    {
+        message: 'Comentario editado',
+        postId: 1 // (del comentario editado)
+    }
+    STATUS: 200          
+
+-----------------------------------------------------
+
+ENDPOINT: /comments/:id
+METODO: delete
+ACCION: elimina un comentario
+RESPONSE (ejemplo):
+    {
+        message: 'Comentario eliminado',
+    }
+    STATUS: 200              

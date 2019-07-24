@@ -1,3 +1,22 @@
+ENDPOINT: /posts/
+METODO: post
+ACCION: agrega un nuevo post
+BODY (ejemplo):
+    {
+        title: 'Como hacer una API?',
+        body: 'blablablabla',
+        communityId: 3,
+        postId: 3
+    }    
+RESPONSE (ejemplo):
+    {
+        message: 'Post creado',
+        id: 1 // (del post creado)
+    }
+    STATUS: 200  
+
+-----------------------------------------------------
+
 ENDPOINT: /posts/:id
 METODO: get
 ACCION: obtiene la info de un post por id
@@ -70,7 +89,7 @@ RESPONSE (ejemplo):
 -----------------------------------------------------
 
 ENDPOINT: /posts/:id
-METODO: put
+METODO: delete
 ACCION: elimina un post por id
 RESPONSE (ejemplo):
     {
