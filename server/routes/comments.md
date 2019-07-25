@@ -1,6 +1,7 @@
-ENDPOINT: /comments/:postId
+ENDPOINT: /comments
 METODO: get
-ACCION: obtiene la lista de comentarios de un post
+QUERY: post (id del post) o user (id del usuario)
+ACCION: obtiene una lista de comentarios
 RESPONSE (ejemplo):
     [
         {
@@ -9,6 +10,14 @@ RESPONSE (ejemplo):
             user: {
                 id: 23,
                 username: 'ada'
+            }, 
+            post: {
+                id: 3,
+                title: 'Como hacer una api'
+            },
+            community: {
+                id: 3,
+                name: 'Programacion'
             }
         },
         {
@@ -17,6 +26,14 @@ RESPONSE (ejemplo):
             user: {
                 id: 24,
                 username: 'margaret'
+            }, 
+            post: {
+                id: 3,
+                title: 'Como hacer una api'
+            },
+            community: {
+                id: 3,
+                name: 'Programacion'
             }
         }
     ]

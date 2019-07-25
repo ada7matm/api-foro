@@ -3,10 +3,11 @@ METODO: post
 ACCION: agrega un nuevo post
 BODY (ejemplo):
     {
+        id: 3,
         title: 'Como hacer una API?',
         body: 'blablablabla',
         communityId: 3,
-        postId: 3
+        userId: 3
     }    
 RESPONSE (ejemplo):
     {

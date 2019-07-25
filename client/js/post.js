@@ -31,7 +31,7 @@ const updateAuthorInfo = profile => {
 const getComments = () => {
     postsContainer.innerHTML = '';
     axios
-    .get(`http://localhost:3000/comments/${postId}`)
+    .get(`http://localhost:3000/comments?post=${postId}`)
     .then(response => {
         for(const comment of response.data) {
             addComment(comment);
